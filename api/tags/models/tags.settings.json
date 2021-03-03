@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "drinks": {
+      "collection": "drink",
+      "via": "tags",
+      "dominant": true
+    },
+    "type": {
+      "type": "string",
+      "default": "tag",
+      "required": true
+    }
+  }
+}

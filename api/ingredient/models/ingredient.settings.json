@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients",
+  "info": {
+    "name": "ingredient",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "drinks": {
+      "collection": "drink",
+      "via": "ingredients",
+      "dominant": true
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "ingredient"
+    }
+  }
+}

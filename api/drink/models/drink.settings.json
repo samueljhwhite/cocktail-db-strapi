@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drinks",
+  "info": {
+    "name": "Drink",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "method": {
+      "type": "richtext",
+      "required": true
+    },
+    "tags": {
+      "via": "drinks",
+      "collection": "tags"
+    },
+    "ingredients": {
+      "via": "drinks",
+      "collection": "ingredient"
+    },
+    "type": {
+      "type": "string",
+      "default": "drink"
+    }
+  }
+}
